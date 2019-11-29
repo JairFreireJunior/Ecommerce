@@ -1,0 +1,24 @@
+
+<div class="container">
+
+  <h1>Produtos da Minha Loja</h1>
+
+  <table class="table table-striped">
+    <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Valor</th>
+          <th>Imagem</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr *ngFor="let produto of produtos">
+            <td class="col-sm-6">{{produto.descricao}}</td>
+            <td class="col-sm-2">R$ {{produto.valor | number: '.2'}}</td>
+            <td><img class="img" src="{{produto.imagem}}"> </td>
+        </tr>
+
+    </tbody>
+  </table>
+</div>
